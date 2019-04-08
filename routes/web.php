@@ -31,5 +31,5 @@ Route::get('auth/facebook', ['as'=>'facebook' , 'uses'=> 'Auth\LoginController@r
 Route::get('auth/facebook/callback', ['as'=>'facebook/callback','uses'=>'Auth\LoginController@handleProviderFacebookCallback']);
 
 // google
-
+Route::resource('events','EventController'); 
 Route::get('/events', 'EventController@index')->name('events');

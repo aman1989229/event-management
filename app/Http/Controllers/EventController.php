@@ -13,7 +13,7 @@ class EventController extends VoyagerBreadController
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {  $posts= Post::all();
+    {  $posts = Post::paginate(10);
         return view('events.event')->withPosts($posts);
     }
 
@@ -43,7 +43,9 @@ class EventController extends VoyagerBreadController
      */
     public function show($id)
     {
-        //
+        $post=Post::find($id);
+
+         return view('events.show')->withPost($post);
     }
 
     /**

@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="row">
 		<div class="col-md-12">
 			
@@ -17,8 +21,7 @@
                    	<td>{{ $post->title }}</td>
                    	<td>{{ substr( strip_tags($post->body) , 0 ,50 ) }} {{strlen(strip_tags($post->body))>50 ?"...." :"" }}</td>
                    	<td>{{ date('M j, Y',strtotime($post->created_at)) }}</td>
-                   	<td><a href="#" class="btn btn-success btn-sm">View</a> <a href="#
-                   	" class="btn btn-warning btn-sm">Edit</a></td>
+                   	<td><a href="{{route('events.show',$post->id)}}" class="btn btn-success btn-sm">View</a></td>
                    </tr>
                    
                   @endforeach
@@ -26,6 +29,9 @@
             </table>
             
             <!--pagination links starts here-->
-            
+           <div class="text-center" style="margin-left: 45%;">
+              {!! $posts->links();!!}
+            </div>
 		</div>
      </div>
+     @endsection
