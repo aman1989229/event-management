@@ -23,3 +23,12 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Socialites
+
+Route::get('auth/facebook', ['as'=>'facebook' , 'uses'=> 'Auth\LoginController@redirectToFacebookProvider'] );
+ 
+Route::get('auth/facebook/callback', ['as'=>'facebook/callback','uses'=>'Auth\LoginController@handleProviderFacebookCallback']);
+
+// google
+
