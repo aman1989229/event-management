@@ -37,12 +37,10 @@ Route::get('auth/twitter', ['as'=>'twitter' , 'uses'=> 'Auth\LoginController@red
 Route::get('auth/twitter/callback', ['as'=>'twitter/callback','uses'=>'Auth\LoginController@handleProviderTwitterCallback']);
 
 // google
+
 Route::resource('events','EventController'); 
 Route::get('/events', 'EventController@index')->name('events');
 
 //bookings
 Route::resource('bookings','BookingController');
-
-
-
 

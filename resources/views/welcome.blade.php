@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>EvePlanner</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,7 +12,11 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: url("img/home.jpeg");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                /*filter: blur(1px);
+                -webkit-filter: blur(1px); */
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -49,10 +53,10 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: yellow;
                 padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
+                font-size: 23px;
+                font-weight: 1000;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -65,6 +69,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+           <!--  do not touc this stuff -->
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -79,20 +84,24 @@
                     @endauth
                 </div>
             @endif
+             
+
+             <!-- yhaa tak touch mt krna -->
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title m-b-md" style="color:darkblue; font-weight: 2000;">
+                    EvePlanner
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
+                    <a href=#feature">Features</a>
+                    <a href="#help">Help</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact Us</a>
+
+                    <!--<a href="https://blog.laravel.com">Blog</a>
                     <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a> -->
                 </div>
             </div>
         </div>
