@@ -59,6 +59,24 @@ class LoginController extends Controller
 
     }
 
+
+  public function redirectToTwitterProvider()
+    {
+        return Socialite::driver('twitter')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderTwitterCallback()
+    {
+        $user = Socialite::driver('twitter')->user();
+
+        // $user->token;
+        dd($user);
+    }
    
 
 }
