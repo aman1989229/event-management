@@ -14,13 +14,13 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach($posts as $post)
+                @foreach($bookings as $booking)
                    <tr>
                     <td>1: </td>
-                   	<td>{{ $post->title }}</td>
-                   	<td>{{ substr( strip_tags($post->body) , 0 ,50 ) }} {{strlen(strip_tags($post->body))>50 ?"...." :"" }}</td>
-                   	<td>{{ date('M j, Y',strtotime($post->created_at)) }}</td>
-                   	<td><a href="{{route('events.show',$post->id)}}" class="btn btn-success btn-sm">View</a></td>
+                   	<td>{{ $booking->title }}</td>
+                   	<td>{{ substr( strip_tags($booking->body) , 0 ,50 ) }} {{strlen(strip_tags($booking->body))>50 ?"...." :"" }}</td>
+                   	<td>{{ date('M j, Y',strtotime($booking->created_at)) }}</td>
+                   	<td><a href="{{route('events.show',$booking->id)}}" class="btn btn-success btn-sm">View</a></td>
                    </tr>
                    
                   @endforeach
@@ -28,9 +28,7 @@
             </table>
             
             <!--pagination links starts here-->
-           <div class="text-center" style="margin-left: 45%;">
-              {!! $posts->links();!!}
-            </div>
+           
 		</div>
      </div>
      @endsection

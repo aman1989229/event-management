@@ -177,6 +177,8 @@ return [
 
         Laravel\Socialite\SocialiteServiceProvider::class,
 
+        Auth0\Login\LoginServiceProvider::class,
+
     ],
 
     /*
@@ -228,7 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite'=> Laravel\Socialite\Facades\Socialite::class,
-
+         'Auth0' => Auth0\Login\Facade\Auth0::class,
     ],
 
 ];

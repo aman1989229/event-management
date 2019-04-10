@@ -28,11 +28,14 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="{{route('bookings.show',$user->id)}}">Your Booking</a>
+                
             </li>
         </ul>
     </nav>
 
 </div>
+
+
 
 @endsection
