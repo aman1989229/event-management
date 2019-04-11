@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use TCG\Voyager\Http\Controllers\VoyagerBreadController;
 use App\User;
 use TCG\Voyager\Models\Post;
-
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -47,12 +47,12 @@ class BookingController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    {  $user = Auth::user();
         //
         $bookings=Post::where('request_id', '=', $id)->get();
        
       
-        return view('bookings.user_booking')->withBookings($bookings);
+        return view('bookings.user_booking')->withBookings($bookings)->withUser($user);
        
     }
 
