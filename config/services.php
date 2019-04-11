@@ -50,11 +50,4 @@ return [
     'redirect' => 'https://localhost:8000/auth/facebook/callback',
 ],
 
-
-   'twitter' => [
-    'client_id' => '',
-    'client_secret' =>'',
-    'redirect' => 'http://your-callback-url',
-],
-
 ];

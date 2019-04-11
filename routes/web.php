@@ -44,3 +44,7 @@ Route::get('/events', 'EventController@index')->name('events');
 //bookings
 Route::resource('bookings','BookingController');
 
+Route::post('/submit', 'EventController@date');
+
+//request
+Route::get('reques/{id}',['uses'=>'RequeController@store','as'=>'reques.store']);

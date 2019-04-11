@@ -11,6 +11,7 @@
   <p>{{$post->slug}}</p>
   @if($post->availability=="Yes")
   <a class="btn btn-success btn-lg" href="#" role="button">Available</a>
+  <a class="btn btn-warning btn-lg" href="{{route('reques.store',$post->id)}}" style="margin-left: 20px;">Make Request</a>
   @else
   <a class="btn btn-danger btn-lg" href="#" role="button">Booked</a>
   @endif
