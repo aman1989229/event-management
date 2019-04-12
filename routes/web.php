@@ -35,3 +35,8 @@ Route::get('auth/facebook/callback', ['as'=>'facebook/callback','uses'=>'Auth\Lo
 Route::resource('events','EventController'); 
 Route::get('/events', 'EventController@index')->name('events');
 
+
+//home Pages
+//Route::get('pages','PageController');
+Route::get('about', 'PageController@index')->name('about');
+Route::get('contact', 'PageController@contact')->name('contact');
