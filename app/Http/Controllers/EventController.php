@@ -7,6 +7,7 @@ use TCG\Voyager\Http\Controllers\VoyagerBreadController;
 use TCG\Voyager\Models\Post;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use  PDF;
 class EventController extends VoyagerBreadController
 {
     /**
@@ -73,8 +74,11 @@ class EventController extends VoyagerBreadController
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {    
+        $user = Auth::user();
+        $post=Post::find($id);
+        $pdf = PDF::loadView('events.pdf',compact('post'));
+          return $pdf->download('invoice.pdf');
     }
 
     /**
