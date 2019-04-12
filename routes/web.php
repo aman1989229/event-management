@@ -48,3 +48,4 @@ Route::post('/submit', 'EventController@date');
 
 //request
 Route::get('reques/{id}',['uses'=>'RequeController@store','as'=>'reques.store']);
+
