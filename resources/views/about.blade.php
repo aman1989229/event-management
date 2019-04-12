@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url("img/home.jpeg");
+                background-image: url("img/about.jpg");
                 background-size: 100% 100%;
                 background-repeat: no-repeat;
                 /*filter: blur(1px);
@@ -73,8 +73,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/events') }}">Home</a>
-                       
+                        <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -89,19 +88,18 @@
              <!-- yhaa tak touch mt krna -->
 
             <div class="content">
-                <div class="title m-b-md" style="color:darkblue; font-weight: 2000;">
-                    EvePlanner
+                <div style="color:darkblue; font-weight: 2000;">
+                    About Us
                 </div>
-
-                <div class="links">
-                    <a href="features">Features</a>
-                    <a href="help">Help</a>
-                    <a href="about">About Us</a>
-                    <a href="contact">Contact Us</a>
-
-                    <!--<a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>{{route('about')}} -->
+                <div>
+                	The best automated event scheduling website for you and everyone you meet.
+                	EvePlanner works according to you to automatically check the availability and help you connect with your friends, collegues and clients.
+                </div>
+                <div style="color:darkblue; font-weight: 2000;">
+                    Take ownership of your scheduling experience
+                </div>
+                <div>
+                	You can view your schedules as per your sorting convinience. You can download your events and schedules. Invite people or contacts you want. View, book or delete your schedules.
                 </div>
             </div>
         </div>
