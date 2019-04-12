@@ -1,10 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="row">
-		<div class="col-md-12">
-			
+  @include('partials.sidebar')
+		<div class="col-md-10">
+	       	<div class="row" style="margin-left: 10px;">
+          Filter:
+          <a href="events/?availability=Yes">Available</a>
+          <a href="#">|</a>
+          <a href="{{route('events')}}">Reset</a> 
+
+          <form method="POST" action="{{URL::to('/submit')}}" style="margin-left:20px;">
+          Date:
+            <input type="text" id="datetimepicker" name="from">
+            to
+            <input type="text" id="datetimepicker" name="to">
+            <button type="submit">Submit</button>
+          </form> 
+          </div>
+          
 			     <table class="table">
               <thead>
                 <tr>
@@ -15,9 +29,12 @@
                 </tr>
               </thead>
               <tbody>
+                @php
+                $i=1;
+                @endphp
                 @foreach($posts as $post)
                    <tr>
-                    <td>1: </td>
+                    <td>@php echo($i++); @endphp </td>
                    	<td>{{ $post->title }}</td>
                    	<td>{{ substr( strip_tags($post->body) , 0 ,50 ) }} {{strlen(strip_tags($post->body))>50 ?"...." :"" }}</td>
                    	<td>{{ date('M j, Y',strtotime($post->created_at)) }}</td>
@@ -34,4 +51,5 @@
             </div>
 		</div>
      </div>
+
      @endsection

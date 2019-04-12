@@ -30,13 +30,30 @@ Route::get('auth/facebook', ['as'=>'facebook' , 'uses'=> 'Auth\LoginController@r
  
 Route::get('auth/facebook/callback', ['as'=>'facebook/callback','uses'=>'Auth\LoginController@handleProviderFacebookCallback']);
 
+// twitter socialite
+
+Route::get('auth/twitter', ['as'=>'twitter' , 'uses'=> 'Auth\LoginController@redirectToTwitterProvider']);
+
+Route::get('auth/twitter/callback', ['as'=>'twitter/callback','uses'=>'Auth\LoginController@handleProviderTwitterCallback']);
+
 // google
 
 Route::resource('events','EventController'); 
 Route::get('/events', 'EventController@index')->name('events');
 
 
+
 //home Pages
 //Route::get('pages','PageController');
 Route::get('about', 'PageController@index')->name('about');
 Route::get('contact', 'PageController@contact')->name('contact');
+=======
+//bookings
+Route::resource('bookings','BookingController');
+
+Route::post('/submit', 'EventController@date');
+
+//request
+Route::get('reques/{id}',['uses'=>'RequeController@store','as'=>'reques.store']);
+
+

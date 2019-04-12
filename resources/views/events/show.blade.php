@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <div class="jumbotron">
   <h1 class="display-4" style="text-decoration: underline;">{{$post->title}}</h1>
  
@@ -11,8 +10,10 @@
   <p>{{$post->slug}}</p>
   @if($post->availability=="Yes")
   <a class="btn btn-success btn-lg" href="#" role="button">Available</a>
+  <a class="btn btn-warning btn-lg" href="{{route('reques.store',$post->id)}}" style="margin-left: 20px;">Make Request</a>
   @else
   <a class="btn btn-danger btn-lg" href="#" role="button">Booked</a>
+  <a href="{{route('events.edit',$post->id)}}" class="btn-danger btn-lg">Convert into Pdf</a>
   @endif
 </div>
 
