@@ -19,17 +19,17 @@ img:hover {
     <!-- Sidebar -->
     <nav id="sidebar" style="background-color: darkblue;width:10%;">
         <div class="sidebar-header"style="background-color: black; color: white;text-decoration: underline;">
-            <span class="col-md-5" style="margin-left: 25px; text-align: center;"><img src="img/sea.jpg" alt="User's Profile" style="width:50%; border-radius: 50px;"></span>
+            <span class="col-md-5" style="margin-left: 25px; text-align: center;"><img src="/img/sea.jpg" alt="User's Profile" style="width:50%; border-radius: 50px;"></span>
             <span class="col-md-7" style="margin-left: 18px; text-align: center;"><h4>User's View</h4></span>
             
         </div>
         <div class="col-md-12">
         <ul class="list-unstyled components">
-            <li class="active">
+            <li class="{{ Request::is('events')? "active" :"" }}">
                 <a href="{{ route('events') }}" >Events</a>
             </li>
            <hr style="background-color: black;" />
-            <li>
+            <li class="{{ Request::is('bookings')? "active" :"" }}">
                 <a href="{{route('bookings.show',$user->id)}}">Your Booking</a>
                 
             </li>

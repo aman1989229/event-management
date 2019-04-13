@@ -5,7 +5,7 @@
   @include('partials.sidebar')
 		<div class="col-md-8">
 			
-			     <table class="table">
+			     <table class="table" style="margin-left: 3%; margin-top: 8%;">
               <thead>
                 <tr>
                   <th scope="col">S.n.</th>
