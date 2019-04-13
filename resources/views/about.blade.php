@@ -49,7 +49,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 54px;
             }
 
             .links > a {
@@ -88,21 +88,22 @@
              <!-- yhaa tak touch mt krna -->
 
             <div class="row">
-                <div class="col-sm-6"></div><div class="col-sm-4">
-                <div style="color:darkblue; font-weight: 2000; font-size: 22px;">
+                <div class="col-sm-4" style="margin-left: 50%;">
+                <div class="title" style="color:darkblue; font-weight:bolder;text-decoration: underline;text-align: center; padding-bottom: 20px;">
                     About Us
                 </div>
-                <div>
+                <div style="font-size: 18px;">
                 	The best automated event scheduling website for you and everyone you meet.
                 	EvePlanner works according to you to automatically check the availability and help you connect with your friends, collegues and clients.
                 </div>
-                <div style="color:darkblue; font-weight: 2000;">
+                <div style="color:darkgreen; font-weight: 2000; font-size: 30px; padding: 20px;">
                     Take ownership of your scheduling experience
                 </div>
-                <div>
+                <div style="font-size: 18px;">
                 	You can view your schedules as per your sorting convinience. You can download your events and schedules. Invite people or contacts you want. View, book or delete your schedules.
                 </div>
             </div>
         </div>
+
     </body>
 </html>

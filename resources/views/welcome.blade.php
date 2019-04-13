@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>EvePlanner</title>
+        <title style="font-weight: 400;">EvePlanner</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -50,13 +50,18 @@
 
             .title {
                 font-size: 84px;
+                font-family: Geneva;
+
+                text-shadow: -1px -1px 0 #CDC4DC, 1px -1px 0 #CDC4DC, 1px 1px 0 #CDC4DC;
             }
 
             .links > a {
                 color: yellow;
                 padding: 0 25px;
+                font-family: Times New Roman;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
                 font-size: 23px;
-                font-weight: 1000;
+                font-weight: 150;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
