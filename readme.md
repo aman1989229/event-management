@@ -23,10 +23,10 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Libraries and other versions used
 
-- -> Laravel 5.8
-- -> Voyager 
-- -> PHP 7.1.*
-- -> Html 5, css, JavaScript, Bootstrap
+- Laravel 5.8
+- Voyager 
+- PHP 7.1.*
+- Html 5, css, JavaScript, Bootstrap
 
 ## Environment Setup
 
@@ -35,8 +35,8 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 - **[Download Gitbash]**
 - **[Open gitbash inside:]** C:\xampp\htdocs
 - **[Clone Project from Gitbash]** git clone https://github.com/aman1989229/event.git
-User-name:aman1989229
-Password:aman123@@@
+- > User-name:aman1989229
+- > Password: aman123@@@
 - **[Download the Database](https://drive.google.com/open?id=1f03LbB9aE3PvXGcGEIGw2YLQw7J1GpQV)**
 
 - After downloading the project, open PHPMyAdmin from xampp
@@ -47,10 +47,10 @@ Password:aman123@@@
 
 Open command-prompt (CMD):
 - > Type: cd C:\xampp\htdocs\event
-- > to run the Laravel Server Type: php artisan serve
-- > paste the link onto ur browser : http://127.0.0.1:8000
+- > To run the Laravel Server Type: php artisan serve
+- > Paste the link onto ur browser : http://127.0.0.1:8000
 - > Userlogin: aman@gmail.com  or you can register by your own (Don't Login with facebook not working) 
-- >Pass:: 123456
+- > Password: 123456
 
 ## Admin Login
 
@@ -61,7 +61,7 @@ http://127.0.0.1:8000/admin
 
 - After login if you see : Missing storage symlink
 - We could not find a storage symlink. This could cause problems with loading media files from the browser.
-- >Then click on Fix It (it will automatically fix the storage section) or Go to  C:\xampp\htdocs\event\public folder and delete "Storage" Folder inside it. Then open Command-prompt and type:
+- Then click on Fix It (it will automatically fix the storage section) or Go to  C:\xampp\htdocs\event\public folder and delete "Storage" Folder inside it. Then open Command-prompt and type:
 - > cd  C:\xampp\htdocs\event
 - > php artisan storage:link
 
