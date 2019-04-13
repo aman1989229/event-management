@@ -21,51 +21,75 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Libraries and other versions used
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-> Laravel 5.8
+-> Voyager 
+-> PHP 7.1.*
+-> Html 5, css, JavaScript, Bootstrap
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost you and your team's skills by digging into our comprehensive video library.
+## Environment Setup
 
-## Laravel Sponsors
+- **[Download xampp](https://www.apachefriends.org/xampp-files/7.1.27/xampp-windows-x64-7.1.27-1-VC14-installer.exe)**
+- **[Install Composer](https://getcomposer.org/Composer-Setup.exe)**
+- **[Download Gitbash]**
+	Open gitbash here: C:\xampp\htdocs
+- **[Clone Project from Gitbash]** git clone https://github.com/aman1989229/event.git
+User-name:aman1989229
+Password:aman123@@@
+- **[Download the Database](https://drive.google.com/open?id=1f03LbB9aE3PvXGcGEIGw2YLQw7J1GpQV)**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+After downloading the project, open PHPMyAdmin from xampp
+Create database: event
+Import the database event (downloaded earlier)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
+## Open Project
 
-## Contributing
+Open command-prompt (CMD):
+> Type: cd C:\xampp\htdocs\event
+> to run the Laravel Server Type: php artisan serve
+> paste the link onto ur browser : http://127.0.0.1:8000
+> Userlogin: aman@gmail.com  or you can register by your own (Don't Login with facebook not working) 
+>Pass:: 123456
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Admin Login
 
-## Security Vulnerabilities
+http://127.0.0.1:8000/admin
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+User-name: admin@admin.com
+Password: password
 
-## License
+After login if you see : Missing storage symlink
+We could not find a storage symlink. This could cause problems with loading media files from the browser.
+>Then click on Fix It (it will automatically fix the storage section) or Go to  C:\xampp\htdocs\event\public folder and delete "Storage" Folder inside it. Then open Command-prompt and type:
+> cd  C:\xampp\htdocs\event
+> php artisan storage:link
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Now, refresh your admin panel and click "Fix It".
+
+
+
+## Features implemented
+
+1. Login/Signup for user/admin.
+2. Admin can add new venues or events and allow time slots.
+3. User can view all Events (available and booked both).
+4. Added Filter for Available Events and Reset options.
+5. User can view a particular Event.
+6. If the Event is available, user can Make Request to book the event.
+7. If the event is booked, then user can download that event file as PDF.
+8. User can view all his booked events under "Your Booking" option.
+9. Events can be made Public or Private by the admin.
+10. User can Contact Us for any query through Contact Us Page.
+
+
+## Admin Features
+
+1. Admin can view total Users, Posts, Events.
+2. Admin can add the user, edit, sort and delete the user.
+3. Admin can add, sort, delete the event.
+4. Admin can view, edit and delete the requested events for booking.
+5. Admin can access the database through dashboard.
+
+
+## For any queries or doubts, call us @ 8726225946 or @ 8896408668
