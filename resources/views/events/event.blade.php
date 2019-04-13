@@ -3,14 +3,15 @@
 @section('content')
 <div class="row">
   @include('partials.sidebar')
+
 		<div class="col-md-10">
-	       	<div class="row" style="margin-left: 10px;">
+	       	<div class="row" style="margin-left:10%;">
           Filter:
           <a href="events/?availability=Yes">Available</a>
           <a href="#">|</a>
           <a href="{{route('events')}}">Reset</a> 
 
-          <form method="POST" action="{{URL::to('/submit')}}" style="margin-left:20px;">
+          <form method="POST" action="{{URL::to('/submit')}}" style="margin-left:5%;">
           Date:
             <input type="text" id="datetimepicker" name="from">
             to
@@ -19,7 +20,7 @@
           </form> 
           </div>
           
-			     <table class="table">
+			     <table class="table" style="margin-left: 3%; margin-top: 4%;">
               <thead>
                 <tr>
                   <th scope="col">S.n.</th>
