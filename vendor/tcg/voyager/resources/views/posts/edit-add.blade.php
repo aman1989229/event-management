@@ -251,6 +251,16 @@
                                     @endforeach
                                 </select>
                             </div>
+
+                            <div class="form-group">
+                                <label for="request_id">{!!'User'!!}</label>
+                                <select class="form-control" name="request_id">
+                                    @foreach(TCG\Voyager\Models\User::all() as $category)
+                                        <option value="{{ $category->id }}"@if(isset($dataTypeContent->category_id) && $dataTypeContent->category_id == $category->id) selected="selected"@endif>{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             <div class="form-group">
                                 <label for="featured">{{ __('voyager::generic.featured') }}</label>
                                 <input type="checkbox" name="featured"@if(isset($dataTypeContent->featured) && $dataTypeContent->featured) checked="checked"@endif>
