@@ -87,8 +87,9 @@
 
              <!-- yhaa tak touch mt krna -->
 
-            <div class="content">
-                <div style="color:darkblue; font-weight: 2000;">
+            <div class="row">
+                <div class="col-sm-6"></div><div class="col-sm-4">
+                <div style="color:darkblue; font-weight: 2000; font-size: 22px;">
                     About Us
                 </div>
                 <div>
