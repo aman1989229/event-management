@@ -23,49 +23,49 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Libraries and other versions used
 
--> Laravel 5.8
--> Voyager 
--> PHP 7.1.*
--> Html 5, css, JavaScript, Bootstrap
+- -> Laravel 5.8
+- -> Voyager 
+- -> PHP 7.1.*
+- -> Html 5, css, JavaScript, Bootstrap
 
 ## Environment Setup
 
 - **[Download xampp](https://www.apachefriends.org/xampp-files/7.1.27/xampp-windows-x64-7.1.27-1-VC14-installer.exe)**
 - **[Install Composer](https://getcomposer.org/Composer-Setup.exe)**
 - **[Download Gitbash]**
-	Open gitbash here: C:\xampp\htdocs
+- **[Open gitbash inside:]** C:\xampp\htdocs
 - **[Clone Project from Gitbash]** git clone https://github.com/aman1989229/event.git
 User-name:aman1989229
 Password:aman123@@@
 - **[Download the Database](https://drive.google.com/open?id=1f03LbB9aE3PvXGcGEIGw2YLQw7J1GpQV)**
 
-After downloading the project, open PHPMyAdmin from xampp
-Create database: event
-Import the database event (downloaded earlier)
+- After downloading the project, open PHPMyAdmin from xampp
+- Create database: event
+- Import the database event (downloaded earlier)
 
 ## Open Project
 
 Open command-prompt (CMD):
-> Type: cd C:\xampp\htdocs\event
-> to run the Laravel Server Type: php artisan serve
-> paste the link onto ur browser : http://127.0.0.1:8000
-> Userlogin: aman@gmail.com  or you can register by your own (Don't Login with facebook not working) 
->Pass:: 123456
+- > Type: cd C:\xampp\htdocs\event
+- > to run the Laravel Server Type: php artisan serve
+- > paste the link onto ur browser : http://127.0.0.1:8000
+- > Userlogin: aman@gmail.com  or you can register by your own (Don't Login with facebook not working) 
+- >Pass:: 123456
 
 ## Admin Login
 
 http://127.0.0.1:8000/admin
 
-User-name: admin@admin.com
-Password: password
+- User-name: admin@admin.com
+- Password: password
 
-After login if you see : Missing storage symlink
-We could not find a storage symlink. This could cause problems with loading media files from the browser.
->Then click on Fix It (it will automatically fix the storage section) or Go to  C:\xampp\htdocs\event\public folder and delete "Storage" Folder inside it. Then open Command-prompt and type:
-> cd  C:\xampp\htdocs\event
-> php artisan storage:link
+- After login if you see : Missing storage symlink
+- We could not find a storage symlink. This could cause problems with loading media files from the browser.
+- >Then click on Fix It (it will automatically fix the storage section) or Go to  C:\xampp\htdocs\event\public folder and delete "Storage" Folder inside it. Then open Command-prompt and type:
+- > cd  C:\xampp\htdocs\event
+- > php artisan storage:link
 
-Now, refresh your admin panel and click "Fix It".
+- Now, refresh your admin panel and click "Fix It".
 
 
 
