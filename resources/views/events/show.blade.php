@@ -9,10 +9,10 @@
   <hr class="my-4">
   <p>{{$post->slug}}</p>
   @if($post->availability=="Yes")
-  <a class="btn btn-success btn-lg" href="#" role="button">Available</a>
-  <a class="btn btn-warning btn-lg" href="{{route('reques.store',$post->id)}}" style="margin-left: 20px;">Make Request</a>
+  <div style="width:70%; border:2; font-weight:bolder; font-size: 20px;" class="alert alert-success">Available</div>
+  <a class="btn btn-warning btn-lg" href="{{route('reques.store',$post->id)}}" style="margin-left: 5px;">Make Request</a>
   @else
-  <a class="btn btn-danger btn-lg" href="#" role="button">Booked</a>
+  <div style="width:70%; border:2; font-weight:bolder; font-size: 20px;"  class="alert alert-danger">Booked</div>
   <a href="{{route('events.edit',$post->id)}}" class="btn-danger btn-lg">Convert into Pdf</a>
   @endif
 </div>
