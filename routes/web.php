@@ -47,7 +47,6 @@ Route::get('/events', 'EventController@index')->name('events');
 //Route::get('pages','PageController');
 Route::get('about', 'PageController@index')->name('about');
 Route::get('contact', 'PageController@contact')->name('contact');
-=======
 //bookings
 Route::resource('bookings','BookingController');
 
