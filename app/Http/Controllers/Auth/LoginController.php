@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use Socialite;
+use App\User;
+use Auth;
+
 class LoginController extends Controller
 {
     /*
@@ -25,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/events';
 
     /**
      * Create a new controller instance.
@@ -36,4 +40,43 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+     public function redirectToFacebookProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderFacebookCallback()
+    {
+        $user = Socialite::driver('facebook')->user();
+
+        // $user->token;
+
+    }
+
+
+  public function redirectToTwitterProvider()
+    {
+        return Socialite::driver('twitter')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderTwitterCallback()
+    {
+        $user = Socialite::driver('twitter')->user();
+
+        // $user->token;
+        dd($user);
+    }
+   
+
 }

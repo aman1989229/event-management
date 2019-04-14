@@ -13,6 +13,10 @@ return [
     'user' => [
         'add_default_role_on_register' => true,
         'default_role'                 => 'user',
+        // Set `namespace` to `null` to use `config('auth.providers.users.model')` value
+        // Set `namespace` to a class to override auth user model.
+        // However make sure the appointed class must ready to use before installing voyager.
+        // Otherwise `php artisan voyager:install` will fail with class not found error.
         'namespace'                    => null,
         'default_avatar'               => 'users/default.png',
         'redirect'                     => '/admin',
@@ -145,9 +149,9 @@ return [
         ],
 
         'widgets' => [
-            'TCG\\Voyager\\Widgets\\UserDimmer',
-            'TCG\\Voyager\\Widgets\\PostDimmer',
-            'TCG\\Voyager\\Widgets\\PageDimmer',
+                  'TCG\\Voyager\\Widgets\\UserDimmer',
+                   'TCG\\Voyager\\Widgets\\PostDimmer',
+                   'TCG\\Voyager\\Widgets\\PageDimmer',
         ],
 
     ],
@@ -205,6 +209,21 @@ return [
          ],
          'zoom' => env('GOOGLE_MAPS_DEFAULT_ZOOM', 11),
      ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Model specific settings
+    |--------------------------------------------------------------------------
+    |
+    | Here you change some model specific settings
+    |
+    */
+
+    'settings' => [
+        // Enables Laravel cache method for
+        // storing cache values between requests
+        'cache' => false,
+    ],
 
     // Activate compass when environment is NOT local
     'compass_in_production' => false,

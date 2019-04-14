@@ -4,7 +4,6 @@
     <title>@yield('page_title', setting('admin.title') . " - " . setting('admin.description'))</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
-    <meta name="assets-path" content="{{ route('voyager.assets') }}"/>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -113,8 +112,12 @@ if (starts_with(app('VoyagerAuth')->user()->avatar, 'http://') || starts_with(ap
 
 
 <script type="text/javascript" src="{{ voyager_asset('js/app.js') }}"></script>
+<script type="text/javascript" src="{{ voyager_asset('js/jquery.datetimepicker.min.js') }}"></script>
 
 <script>
+       
+       $("#datetimepicker").datetimepicker();
+
     @if(Session::has('alerts'))
         let alerts = {!! json_encode(Session::get('alerts')) !!};
         helpers.displayAlerts(alerts, toastr);

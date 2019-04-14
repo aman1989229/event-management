@@ -121,7 +121,7 @@
                         </div>
                     </div><!-- .panel -->
 
-                    <!-- ### EXCERPT ### -->
+                    <!-- ### EXCERPT ###
                     <div class="panel">
                         <div class="panel-heading">
                             <h3 class="panel-title">{!! __('voyager::post.excerpt') !!}</h3>
@@ -136,9 +136,9 @@
                             ])
                             <textarea class="form-control" name="excerpt">{{ $dataTypeContent->excerpt ?? '' }}</textarea>
                         </div>
-                    </div>
+                    </div>-->
 
-                    <div class="panel">
+                   <!-- <div class="panel">
                         <div class="panel-heading">
                             <h3 class="panel-title">{{ __('voyager::post.additional_fields') }}</h3>
                             <div class="panel-actions">
@@ -177,7 +177,7 @@
                                 @endif
                             @endforeach
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="col-md-4">
@@ -209,6 +209,40 @@
                                     <option value="PENDING"@if(isset($dataTypeContent->status) && $dataTypeContent->status == 'PENDING') selected="selected"@endif>{{ __('voyager::post.status_pending') }}</option>
                                 </select>
                             </div>
+
+                            <div class="form-group">
+                                <label for="availability">{{ __('availability') }}</label>
+                                <select class="form-control" name="availability">
+                                    <option value="Yes"@if(isset($dataTypeContent->availability) && $dataTypeContent->availability == 'Yes') selected="selected"@endif>{{ __('Yes') }}</option>
+                                    <option value="No"@if(isset($dataTypeContent->availability) && $dataTypeContent->availability == 'No') selected="selected"@endif>{{ __('No') }}</option>
+                                </select>
+                            </div>
+                               
+                               <div class="form-group">
+                                <label for="event_access">{{ __('access') }}</label>
+                                <select class="form-control" name="event_access">
+                                    <option value="Private"@if(isset($dataTypeContent->event_access) && $dataTypeContent->event_access == 'Private') selected="selected"@endif>{{ __('Private') }}</option>
+                                    <option value="Public"@if(isset($dataTypeContent->event_access) && $dataTypeContent->event_access == 'Public') selected="selected"@endif>{{ __('Public') }}</option>
+                                </select>
+                            </div>
+
+                              <div class="form-group">
+                                <label for="user_status">{{ __('user_status') }}</label>
+                                <select class="form-control" name="user_status">
+                                    <option value="Booked"@if(isset($dataTypeContent->event_access) && $dataTypeContent->event_access == 'Booked') selected="selected"@endif>{{ __('Booked') }}</option>
+                                    <option value="Pending"@if(isset($dataTypeContent->event_access) && $dataTypeContent->event_access == 'Pending') selected="selected"@endif>{{ __('Pending') }}</option>
+                                    <option value="Rejected"@if(isset($dataTypeContent->event_access) && $dataTypeContent->event_access == 'Rejected') selected="selected"@endif>{{ __('Rejected') }}</option>
+                                </select>
+                            </div>
+
+                               
+                                                        
+                              <div class="form-group">
+                                <label for="schedule">{{ __('schedule') }}</label>
+                                <br>
+                        <input type="text" name="schedule" id="datetimepicker">
+                            </div>
+
                             <div class="form-group">
                                 <label for="category_id">{{ __('voyager::post.category') }}</label>
                                 <select class="form-control" name="category_id">
@@ -217,6 +251,16 @@
                                     @endforeach
                                 </select>
                             </div>
+
+                            <div class="form-group">
+                                <label for="request_id">{!!'User'!!}</label>
+                                <select class="form-control" name="request_id">
+                                    @foreach(TCG\Voyager\Models\User::all() as $category)
+                                        <option value="{{ $category->id }}"@if(isset($dataTypeContent->category_id) && $dataTypeContent->category_id == $category->id) selected="selected"@endif>{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             <div class="form-group">
                                 <label for="featured">{{ __('voyager::generic.featured') }}</label>
                                 <input type="checkbox" name="featured"@if(isset($dataTypeContent->featured) && $dataTypeContent->featured) checked="checked"@endif>
@@ -240,41 +284,8 @@
                         </div>
                     </div>
 
-                    <!-- ### SEO CONTENT ### -->
-                    <div class="panel panel-bordered panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><i class="icon wb-search"></i> {{ __('voyager::post.seo_content') }}</h3>
-                            <div class="panel-actions">
-                                <a class="panel-action voyager-angle-down" data-toggle="panel-collapse" aria-hidden="true"></a>
-                            </div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <label for="meta_description">{{ __('voyager::post.meta_description') }}</label>
-                                @include('voyager::multilingual.input-hidden', [
-                                    '_field_name'  => 'meta_description',
-                                    '_field_trans' => get_field_translations($dataTypeContent, 'meta_description')
-                                ])
-                                <textarea class="form-control" name="meta_description">{{ $dataTypeContent->meta_description ?? '' }}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="meta_keywords">{{ __('voyager::post.meta_keywords') }}</label>
-                                @include('voyager::multilingual.input-hidden', [
-                                    '_field_name'  => 'meta_keywords',
-                                    '_field_trans' => get_field_translations($dataTypeContent, 'meta_keywords')
-                                ])
-                                <textarea class="form-control" name="meta_keywords">{{ $dataTypeContent->meta_keywords ?? '' }}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="seo_title">{{ __('voyager::post.seo_title') }}</label>
-                                @include('voyager::multilingual.input-hidden', [
-                                    '_field_name'  => 'seo_title',
-                                    '_field_trans' => get_field_translations($dataTypeContent, 'seo_title')
-                                ])
-                                <input type="text" class="form-control" name="seo_title" placeholder="SEO Title" value="{{ $dataTypeContent->seo_title ?? '' }}">
-                            </div>
-                        </div>
-                    </div>
+                    
+
                 </div>
             </div>
 
